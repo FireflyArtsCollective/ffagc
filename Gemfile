@@ -5,7 +5,7 @@ gem 'rails', '~> 4.2.10'
 # Define Abilites of Models in one place
 gem 'cancancan'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'sqlite3', '~> 1.3.6'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 gem 'therubyracer'
