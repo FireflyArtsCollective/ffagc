@@ -72,7 +72,6 @@
 </div>
 
 
-<% if @grants.present? %>
 <div class="panel panel-default">
   <div class="panel-heading">
     <h3 class="panel-title clearfix">Grants
@@ -83,6 +82,7 @@
       <% end %>
     </h3>
   </div>
+  <% if @grants.present? %>
   <table class="table table-striped">
     <thead>
       <tr>
