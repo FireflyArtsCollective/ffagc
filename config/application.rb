@@ -34,7 +34,7 @@ module Ffagc
     }
 
     # The year that the event will take place
-    config.event_year = "2019"
+    config.event_year = "2020"
     # The timezone for the event, used to calculate submission and voting
     # deadlines.
     config.event_timezone = "America/New_York"

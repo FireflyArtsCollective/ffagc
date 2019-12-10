@@ -4,43 +4,43 @@
 # the db (famous last words).  Rule of thumb: If you need to know the value
 # behind the formatted text, don't put it here.
 
-install_day: "Friday, July 5, 2019"
-skill_attend_day: "Friday, June 28, 2019"
+install_day: "Friday, July 3, 2020"
+skill_attend_day: "Friday, June 26, 2020"
 Temple:
-  contract_deadline: "Friday, February 22, 2019"
-  schedule: ["Friday, February 22, 2019: Signed Contracts Due",
-             "Tuesday, February 25, 2019: Check cut and sent",
-             "Tuesday, July 2 - Sunday, July 7, 2019: Firefly!"]
+  contract_deadline: "Friday, February 21, 2020"
+  schedule: ["Friday, February 21, 2020: Signed Contracts Due",
+             "Tuesday, February 25, 2020: Check cut and sent",
+             "Tuesday, June 30 - Sunday, July 5, 2020: Firefly!"]
 Moonshot:
   contract_deadline: "10 days after notification of Grant"
-  schedule: ["Tuesday, July 2 - Sunday, July 7, 2019: Firefly!",
-             "Monday, July 22, 2019: Firefly documentation due"]
+  schedule: ["Tuesday, June 30 - Sunday, July 5, 2020: Firefly!",
+             "Monday, July 27, 2020: Firefly documentation due"]
 Creativity:
-  contract_deadline: "Friday, April 5, 2019"
-  schedule: ["Friday, April 5, 2019: Signed Contracts Due",
-             "Monday, April 8, 2019: First check cut and sent",
-             "Tuesday, July 2 - Sunday, July 7, 2019: Firefly!",
-             "Monday, July 22, 2019: Firefly documentation due",
-             "Tuesday, July 30, 2019: Second check cut and sent"]
+  contract_deadline: "Friday, April 3, 2020"
+  schedule: ["Friday, April 3, 2020: Signed Contracts Due",
+             "Monday, April 6, 2020: First check cut and sent",
+             "Tuesday, June 30 - Sunday, July 5, 2020: Firefly!",
+             "Monday, July 27, 2020: Firefly documentation due",
+             "Tuesday, August 3, 2020: Second check cut and sent"]
 Creativity (Second Round):
-  contract_deadline: "Friday, April 5, 2019"
-  schedule: ["Friday, April 5, 2019: Signed Contracts Due",
-             "Monday, April 8, 2019: First check cut and sent",
-             "Tuesday, July 2 - Sunday, July 7, 2019: Firefly!",
-             "Monday, July 22, 2019: Firefly documentation due",
-             "Tuesday, July 30, 2019: Second check cut and sent"]
+  contract_deadline: "Friday, April 3, 2020"
+  schedule: ["Friday, April 3, 2020: Signed Contracts Due",
+             "Monday, April 6, 2020: First check cut and sent",
+             "Tuesday, June 30 - Sunday, July 5, 2020: Firefly!",
+             "Monday, August 3, 2020: Firefly documentation due",
+             "Tuesday, July 30, 2020: Second check cut and sent"]
 Legacy:
-  contract_deadline: "Friday, April 19, 2019"
-  schedule: ["Friday, April 19, 2019: Signed Contracts Due",
-             "Monday, April 22, 2019: Check cut and sent",
-             "Tuesday, July 2 - Sunday, July 7, 2019: Firefly!"]
+  contract_deadline: "Friday, April 17, 2020"
+  schedule: ["Friday, April 17, 2020: Signed Contracts Due",
+             "Monday, April 20, 2020: Check cut and sent",
+             "Tuesday, June 30 - Sunday, July 5, 2020: Firefly!"]
 Skillshare:
-  contract_deadline: "Friday, April 19, 2019"
-  schedule: ["Friday, April 19, 2019: Signed Contracts Due",
-             "Monday, April 22, 2019: Check cut and sent",
-             "Tuesday, July 2 - Sunday, July 7, 2019: Firefly!"]
+  contract_deadline: "Friday, April 17, 2020"
+  schedule: ["Friday, April 17, 2020: Signed Contracts Due",
+             "Monday, April 20, 2020: Check cut and sent",
+             "Tuesday, June 30 - Sunday, July 5, 2020: Firefly!"]
 Burner Exchange Grants:
-  contract_deadline: "Friday, April 19, 2019"
-  schedule: ["Friday, April 19, 2019: Signed Contracts Due",
-             "Monday, April 22, 2019: Check cut and sent",
-             "Tuesday, July 2 - Sunday, July 7, 2019: Firefly!"]
+  contract_deadline: "Friday, April 17, 2020"
+  schedule: ["Friday, April 17, 2020: Signed Contracts Due",
+             "Monday, April 20, 2020: Check cut and sent",
+             "Tuesday, June 30 - Sunday, July 5, 2020: Firefly!"]
