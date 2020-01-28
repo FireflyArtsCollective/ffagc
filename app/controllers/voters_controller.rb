@@ -21,9 +21,10 @@ class VotersController < ApplicationController
       format.html
       format.csv do
         csv_string = CSV.generate do |csv|
-          csv << ['Name', 'Email', 'Verified']
+          csv << ['Name', 'Email', 'Grants', 'Verified']
           @voters.each do |voter|
-            csv << [voter.name, voter.email, voter.verified]
+            grants = voter.grants.pluck(:name).join(",")
+            csv << [voter.name, voter.email, grants, voter.verified]
           end
         end
 
