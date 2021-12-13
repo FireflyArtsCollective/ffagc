@@ -45,7 +45,7 @@ describe AdminsController do
 
   describe '#create' do
     def go!
-      post :create, admin: admin_params
+      post :create, params: { admin: admin_params }
     end
 
     let(:admin_params) { FactoryBot.attributes_for(:admin) }

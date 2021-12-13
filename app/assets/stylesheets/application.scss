@@ -11,8 +11,8 @@
  * file per style scope.
  */
 
-@import "bootstrap-sprockets";
 @import "bootstrap";
+@import "bootstrap-sprockets";
 // TODO: consider only including parts of bootstrap
 
 @import "*";

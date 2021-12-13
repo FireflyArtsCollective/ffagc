@@ -5,7 +5,7 @@ describe ProposalsController do
 
   describe '#destroy' do
     def go!(id)
-      delete 'destroy', id: id
+      delete 'destroy', params: { id: id }
     end
 
     subject { response }

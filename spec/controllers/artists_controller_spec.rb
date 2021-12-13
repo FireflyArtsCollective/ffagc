@@ -36,7 +36,7 @@ describe ArtistsController do
 
   describe '#create' do
     def go!
-      post :create, artist_params
+      post :create, params: artist_params
     end
 
     let(:artist_attributes) { FactoryBot.attributes_for(:artist) }

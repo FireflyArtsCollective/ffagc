@@ -5,7 +5,7 @@ describe GrantSubmissionsController do
 
   describe '#destroy' do
     def go!(id)
-      delete 'destroy', id: id
+      delete 'destroy', params: { id: id }
     end
 
     subject { response }
@@ -41,7 +41,7 @@ describe GrantSubmissionsController do
 
   describe '#discuss' do
     def go!(id)
-      get 'discuss', id: id
+      get 'discuss', params: { id: id }
     end
 
     subject { response }

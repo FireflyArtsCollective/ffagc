@@ -55,7 +55,7 @@ describe GrantsController do
     let(:resource_params) { FactoryBot.attributes_for(:grant) }
 
     def go!
-      post 'create', grant: resource_params
+      post 'create', params: { grant: resource_params }
     end
 
     before { go! }
@@ -80,7 +80,7 @@ describe GrantsController do
     let!(:grant) { FactoryBot.create(:grant) }
 
     def go!
-      get 'edit', id: grant.id
+      get 'edit', params: { id: grant.id }
     end
 
     before { go! }
@@ -91,7 +91,7 @@ describe GrantsController do
 
       context 'with id that does not exist' do
         def go!
-          get 'edit', id: Grant.count + 1
+          get 'edit', params: { id: Grant.count + 1 }
         end
 
         it { is_expected.to be_forbidden }
@@ -118,7 +118,7 @@ describe GrantsController do
     end
 
     def go!
-      post 'update', id: grant.id, grant: resource_params
+      post 'update', params: { id: grant.id, grant: resource_params }
     end
 
     before { go! }

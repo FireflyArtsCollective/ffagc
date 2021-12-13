@@ -8,7 +8,7 @@ FactoryBot.define do
     has_participated_other { Faker::Boolean.boolean }
     has_received_grant { Faker::Boolean.boolean }
     has_received_other_grant { Faker::Boolean.boolean }
-    how_many_fireflies { Faker::Number.between(1, 20) }
+    how_many_fireflies { Faker::Number.between(from: 1, to: 20) }
     signed_agreement { Faker::Boolean.boolean }
   end
 end

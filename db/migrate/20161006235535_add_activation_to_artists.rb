@@ -1,4 +1,4 @@
-class AddActivationToArtists < ActiveRecord::Migration
+class AddActivationToArtists < ActiveRecord::Migration[4.2]
   def change
     add_column :artists, :activation_digest, :string
     add_column :artists, :activated, :boolean, default: false

@@ -1,4 +1,4 @@
-class AddMoreDatesToGrants < ActiveRecord::Migration
+class AddMoreDatesToGrants < ActiveRecord::Migration[4.2]
   def change
     rename_column :grants, :start, :submit_start
     rename_column :grants, :end, :submit_end

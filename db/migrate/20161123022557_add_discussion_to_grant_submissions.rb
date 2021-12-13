@@ -1,4 +1,4 @@
-class AddDiscussionToGrantSubmissions < ActiveRecord::Migration
+class AddDiscussionToGrantSubmissions < ActiveRecord::Migration[4.2]
   def change
     add_column :grant_submissions, :questions, :string
     add_column :grant_submissions, :answers, :string

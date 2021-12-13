@@ -1,4 +1,4 @@
-class CreateVoterSurveys < ActiveRecord::Migration
+class CreateVoterSurveys < ActiveRecord::Migration[4.2]
   def change
     create_table :voter_surveys do |t|
       t.boolean :has_attended_firefly
