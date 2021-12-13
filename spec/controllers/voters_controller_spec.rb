@@ -58,17 +58,14 @@ describe VotersController do
 
   describe '#create' do
     let(:voter_attributes) { FactoryBot.attributes_for(:voter) }
-    let(:voter_survey_attributes) { FactoryBot.attributes_for(:voter_survey) }
-    let(:grants_voter_attributes) { FactoryBot.attributes_for(:grants_voter) }
-    let(:params) do
-      {
-        voter: voter_attributes.merge(voter_survey_attributes: voter_survey_attributes),
-        grants_voters: [grants_voter_attributes]
-      }
-    end
 
     def go!
-      post 'create', params: params
+      post 'create', params:  {
+        voter: voter_attributes.merge(voter_survey_attributes: FactoryBot.attributes_for(:voter_survey)),
+        grants_voters: {
+          0 => "1"
+        }
+      }
     end
 
     it 'returns ok' do
@@ -86,7 +83,7 @@ describe VotersController do
     it 'creates correct VoterSurvey' do
       expect { go! }.to change(VoterSurvey, :count).by(1)
       voter_survey = VoterSurvey.last
-      expect(HashWithIndifferentAccess.new(voter_survey.attributes)).to include(voter_survey_attributes)
+      expect(HashWithIndifferentAccess.new(voter_survey.attributes)).to include(FactoryBot.attributes_for(:voter_survey))
       expect(voter_survey.voter).to eq(Voter.last)
     end
 
@@ -106,14 +103,14 @@ describe VotersController do
     let!(:grant_2) { FactoryBot.create(:grant) }
 
     let(:grants_voters_params) do
-      [
-        [grant_1.id, '0'],
-        [grant_2.id, '1']
-      ]
+      {
+        grant_1.id => "0",
+        grant_2.id => "1"
+      }
     end
 
     def go!
-      put 'update', params: { id: voter.id, grants_voters: grants_voters_params }
+      put 'update', params: { :id => voter.id, :grants_voters => grants_voters_params }
     end
 
     before do
