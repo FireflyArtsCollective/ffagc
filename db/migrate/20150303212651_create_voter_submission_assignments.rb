@@ -1,4 +1,4 @@
-class CreateVoterSubmissionAssignments < ActiveRecord::Migration
+class CreateVoterSubmissionAssignments < ActiveRecord::Migration[4.2]
   def change
     create_table :voter_submission_assignments do |t|
 

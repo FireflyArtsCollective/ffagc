@@ -3,7 +3,7 @@ require 'csv'
 class VotersController < ApplicationController
   load_and_authorize_resource
 
-  before_filter :initialize_grants
+  before_action :initialize_grants
 
   def index
     if params[:scope] == 'verified'
@@ -54,6 +54,8 @@ class VotersController < ApplicationController
       # save participation info
       meetings = collated_meetings
 
+      # can_do means the user has checked the box indicating that they can
+      # participate in the meetings for that grant.
       params.require(:grants_voters).each do |collated_id, can_do|
         if can_do == "0"
           next
@@ -160,6 +162,8 @@ class VotersController < ApplicationController
   end
 
   def process_grants_voter(voter, grants_voters_params)
+    # can_do means the user has checked the box indicating that they can
+    # participate in the meetings for that grant.
     grants_voters_params.each do |grant_id, can_do|
       grant = Grant.find(grant_id)
       next unless grant.present?

@@ -28,7 +28,7 @@ describe VotersController do
     let!(:voter) { FactoryBot.create(:voter, :activated) }
 
     def go!(id)
-      get :show, id: id
+      get :show, params: { id: id }
     end
 
     context 'with activated voter' do
@@ -59,16 +59,14 @@ describe VotersController do
   describe '#create' do
     let(:voter_attributes) { FactoryBot.attributes_for(:voter) }
     let(:voter_survey_attributes) { FactoryBot.attributes_for(:voter_survey) }
-    let(:grants_voter_attributes) { FactoryBot.attributes_for(:grants_voter) }
-    let(:params) do
-      {
-        voter: voter_attributes.merge(voter_survey_attributes: voter_survey_attributes),
-        grants_voters: [grants_voter_attributes]
-      }
-    end
 
     def go!
-      post 'create', params
+      post 'create', params:  {
+        voter: voter_attributes.merge(voter_survey_attributes: voter_survey_attributes),
+        grants_voters: {
+          0 => "1"
+        }
+      }
     end
 
     it 'returns ok' do
@@ -94,7 +92,7 @@ describe VotersController do
       let!(:existing_voter) { FactoryBot.create(:voter, :activated) }
 
       it 'returns an error' do
-        post 'create', voter: { email: existing_voter.email }
+        post 'create', params: { voter: { email: existing_voter.email } }
         expect(response).to render_template('new')
       end
     end
@@ -106,14 +104,14 @@ describe VotersController do
     let!(:grant_2) { FactoryBot.create(:grant) }
 
     let(:grants_voters_params) do
-      [
-        [grant_1.id, '0'],
-        [grant_2.id, '1']
-      ]
+      {
+        grant_1.id => "0",
+        grant_2.id => "1"
+      }
     end
 
     def go!
-      put 'update', id: voter.id, grants_voters: grants_voters_params
+      put 'update', params: { :id => voter.id, :grants_voters => grants_voters_params }
     end
 
     before do
@@ -151,7 +149,7 @@ describe VotersController do
     before { sign_in user }
 
     def go!
-      post 'verify', id: voter.id
+      post 'verify', params: { id: voter.id }
     end
 
     context 'when voter signed in' do
@@ -169,7 +167,7 @@ describe VotersController do
 
       context 'with send_email param' do
         def go!
-          post 'verify', id: voter.id, send_email: 'true'
+          post 'verify', params: { id: voter.id, send_email: 'true' }
         end
 
         it 'verifies voter' do
@@ -185,7 +183,7 @@ describe VotersController do
 
       context 'with params verify: 0' do
         def go!
-          post 'verify', id: voter.id, verify: '0', send_email: 'true'
+          post 'verify', params: { id: voter.id, verify: '0', send_email: 'true' }
         end
 
         it 'unverifies voter' do

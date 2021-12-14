@@ -24,7 +24,7 @@ class PasswordResetsController < ApplicationController
 
   def create
     @type = params[:password_reset][:type]
-    email = URI.unescape(params[:password_reset][:email]).downcase
+    email = URI.decode_www_form_component(params[:password_reset][:email]).downcase
     if @type == "artists"
       @user = Artist.find_by(email: email)
     elsif @type == "voters"
@@ -63,7 +63,7 @@ class PasswordResetsController < ApplicationController
     if p[:password].empty?
       flash.now[:danger] = "Password can't be empty"
       render 'edit', :type => @type, :email => params[:email]
-    elsif @user.update_attributes(user_params(t))
+    elsif @user.update(user_params(t))
       # Clear out the reset digest so it can't be used again.
       @user.update_attribute(:reset_digest, "")
       render "success"
@@ -82,7 +82,7 @@ class PasswordResetsController < ApplicationController
   def get_user
     @type = params[:type]
 
-    email = URI.unescape(params[:email]).downcase
+    email = URI.decode_www_form_component(params[:email]).downcase
     if @type == "artists"
       @user = Artist.find_by(email: email)
     elsif @type == "voters"

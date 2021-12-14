@@ -1,4 +1,4 @@
-class CreateArtistSurveys < ActiveRecord::Migration
+class CreateArtistSurveys < ActiveRecord::Migration[4.2]
   def change
     create_table :artist_surveys do |t|
       t.boolean :has_attended_firefly

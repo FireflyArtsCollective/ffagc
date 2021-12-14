@@ -12,6 +12,6 @@ FactoryBot.define do
   end
 
   sequence :vote_score do
-    Faker::Number.between(0, 2)
+    Faker::Number.between(from: 0, to: 2)
   end
 end

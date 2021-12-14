@@ -1,5 +1,5 @@
 class UserMailer < ActionMailer::Base
-  add_template_helper(ApplicationHelper)
+  helper ApplicationHelper
 
   default from: "grants@fireflyartscollective.org"
 

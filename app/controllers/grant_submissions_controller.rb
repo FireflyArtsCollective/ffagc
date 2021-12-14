@@ -3,7 +3,7 @@ require 'grant_contract'
 class GrantSubmissionsController < ApplicationController
   load_and_authorize_resource
 
-  before_filter :initialize_grants
+  before_action :initialize_grants
 
   def initialize_grants
     @grants = Grant.all

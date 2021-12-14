@@ -5,7 +5,7 @@ describe GrantSubmissionsController do
 
   describe '#destroy' do
     def go!(id)
-      delete 'destroy', id: id
+      delete 'destroy', params: { id: id }
     end
 
     subject { response }
@@ -41,7 +41,7 @@ describe GrantSubmissionsController do
 
   describe '#discuss' do
     def go!(id)
-      get 'discuss', id: id
+      get 'discuss', params: { id: id }
     end
 
     subject { response }
@@ -113,10 +113,10 @@ describe GrantSubmissionsController do
           expect(response).to render_template('grant_submissions/discuss')
 
           # questions block is present and not disabled
-          expect(css_select('textarea#grant_submission_questions').first.attr('disabled')).to be_nil
+          expect(css_select('div#grant_submission_questions').first.attr('disabled')).to be_nil
 
           # answers block is not editable
-          expect(css_select('textarea#grant_submission_answers')).to be_empty
+          expect(css_select('textarea#grant_submission[answers]')).to be_empty
         end
       end
 

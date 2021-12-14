@@ -5,7 +5,7 @@ describe AccountActivationsController do
 
       context 'with correct token' do
         def go!
-          get 'show', type: 'artists', id: artist.activation_token, email: artist.email
+          get 'show', params: { type: 'artists', id: artist.activation_token, email: artist.email }
         end
 
         it 'activates user' do
@@ -15,7 +15,7 @@ describe AccountActivationsController do
 
       context 'with incorrect token' do
         def go!
-          get 'show', type: 'artists', id: 'incorrect_token', email: artist.email
+          get 'show', params: { type: 'artists', id: 'incorrect_token', email: artist.email }
         end
 
         it 'does not activate' do
@@ -29,7 +29,7 @@ describe AccountActivationsController do
 
       context 'with correct token' do
         def go!
-          get 'show', type: 'artists', id: artist.activation_token, email: artist.email
+          get 'show', params: { type: 'artists', id: artist.activation_token, email: artist.email }
         end
 
         it do
@@ -39,7 +39,7 @@ describe AccountActivationsController do
 
       context 'with incorrect token' do
         def go!
-          get 'show', type: 'artists', id: 'incorrect_token', email: artist.email
+          get 'show', params: { type: 'artists', id: 'incorrect_token', email: artist.email }
         end
 
         it do
@@ -49,7 +49,7 @@ describe AccountActivationsController do
 
       context 'when already logged in as that user' do
         def go!
-          get 'show', type: 'artists', id: artist.activation_token, email: artist.email
+          get 'show', params: { type: 'artists', id: artist.activation_token, email: artist.email }
         end
 
         before { sign_in artist }
@@ -67,7 +67,7 @@ describe AccountActivationsController do
 
       context 'with incorrect email' do
         it 'shows failure' do
-          get 'show', type: 'artists', id: artist.activation_token, email: 'test@example.com'
+          get 'show', params: { type: 'artists', id: artist.activation_token, email: 'test@example.com' }
           expect(response).to render_template('show')
         end
       end

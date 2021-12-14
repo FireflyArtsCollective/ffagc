@@ -1,4 +1,4 @@
-class AddActivationToAdmins < ActiveRecord::Migration
+class AddActivationToAdmins < ActiveRecord::Migration[4.2]
   def change
     add_column :admins, :activation_digest, :string
     add_column :admins, :activated, :boolean, default: false

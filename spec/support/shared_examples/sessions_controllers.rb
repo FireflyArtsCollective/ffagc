@@ -21,7 +21,7 @@ end
 shared_examples 'sessions create endpoint' do |type_name, session_key, redirect_path|
   describe '#create' do
     def go!(user)
-      post 'create', session: { email: user.email.upcase, password: user.password }
+      post 'create', params: { session: { email: user.email.upcase, password: user.password }}
     end
 
     it 'allows logging in with case-insensitive email' do

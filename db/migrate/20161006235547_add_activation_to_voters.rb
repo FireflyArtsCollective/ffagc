@@ -1,4 +1,4 @@
-class AddActivationToVoters < ActiveRecord::Migration
+class AddActivationToVoters < ActiveRecord::Migration[4.2]
   def change
     add_column :voters, :activation_digest, :string
     add_column :voters, :activated, :boolean, default: false

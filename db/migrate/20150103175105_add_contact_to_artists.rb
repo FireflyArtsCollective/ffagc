@@ -1,4 +1,4 @@
-class AddContactToArtists < ActiveRecord::Migration
+class AddContactToArtists < ActiveRecord::Migration[4.2]
   def change
     add_column :artists, :contact_name, :string
     add_column :artists, :contact_phone, :string

@@ -6,8 +6,8 @@ Set up the project with:
 
 ```sh
   bundle install
-  bundle exec rake db:migrate RAILS_ENV=development
-  bundle exec rails server
+  bin/rails db:migrate RAILS_ENV=development
+  bin/rails server
 ```
 
 If you are running this project in production you'll need to set environment variables for secrets that include `ENV` in `config/secrets.yml`.  To generate new "secret" hex values, use `bundle exec rake secret`.  Be careful not to push changes to this file to publicly-accessible repositories!

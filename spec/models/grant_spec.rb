@@ -6,7 +6,7 @@ describe Grant do
 
         it 'has expected error' do
           expect(subject).not_to be_valid
-          expect(subject.errors.keys).to include(:submit_start)
+          expect(subject.errors.attribute_names).to include(:submit_start)
         end
       end
 
@@ -15,7 +15,7 @@ describe Grant do
 
         it 'has expected error' do
           expect(subject).not_to be_valid
-          expect(subject.errors.keys).to include(:vote_start)
+          expect(subject.errors.attribute_names).to include(:vote_start)
         end
       end
 
@@ -24,7 +24,7 @@ describe Grant do
 
         it 'has expected error' do
           expect(subject).not_to be_valid
-          expect(subject.errors.keys).to include(:meeting_one, :meeting_two)
+          expect(subject.errors.attribute_names).to include(:meeting_one, :meeting_two)
         end
       end
 
@@ -33,7 +33,7 @@ describe Grant do
 
         it 'has expected error' do
           expect(subject).not_to be_valid
-          expect(subject.errors.keys).to include(:meeting_one)
+          expect(subject.errors.attribute_names).to include(:meeting_one)
         end
       end
     end
@@ -50,7 +50,7 @@ describe Grant do
 
         it 'has expected error' do
           expect(subject).not_to be_valid
-          expect(subject.errors.keys).to include(:funding_levels_csv)
+          expect(subject.errors.attribute_names).to include(:funding_levels_csv)
         end
       end
       context 'invalid input' do
@@ -58,7 +58,7 @@ describe Grant do
 
         it 'has expected error' do
           expect(subject).not_to be_valid
-          expect(subject.errors.keys).to include(:funding_levels_csv)
+          expect(subject.errors.attribute_names).to include(:funding_levels_csv)
         end
       end
       context 'more invalid input' do
@@ -66,7 +66,7 @@ describe Grant do
 
         it 'has expected error' do
           expect(subject).not_to be_valid
-          expect(subject.errors.keys).to include(:funding_levels_csv)
+          expect(subject.errors.attribute_names).to include(:funding_levels_csv)
         end
       end
     end

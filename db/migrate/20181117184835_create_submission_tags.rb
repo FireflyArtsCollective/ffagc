@@ -1,4 +1,4 @@
-class CreateSubmissionTags < ActiveRecord::Migration
+class CreateSubmissionTags < ActiveRecord::Migration[4.2]
   def change
     create_table :submission_tags do |t|
       t.references :tag, index: true, foreign_key: true
