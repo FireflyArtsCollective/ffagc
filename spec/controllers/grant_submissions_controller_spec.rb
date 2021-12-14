@@ -113,10 +113,10 @@ describe GrantSubmissionsController do
           expect(response).to render_template('grant_submissions/discuss')
 
           # questions block is present and not disabled
-          expect(css_select('textarea#grant_submission_questions').first.attr('disabled')).to be_nil
+          expect(css_select('div#grant_submission_questions').first.attr('disabled')).to be_nil
 
           # answers block is not editable
-          expect(css_select('textarea#grant_submission_answers')).to be_empty
+          expect(css_select('textarea#grant_submission[answers]')).to be_empty
         end
       end
 
