@@ -35,16 +35,17 @@ describe ArtistsController do
   end
 
   describe '#create' do
-    def go!
-      post :create, params: artist_params
-    end
 
     let(:artist_attributes) { FactoryBot.attributes_for(:artist) }
     let(:artist_survey_attributes) { FactoryBot.attributes_for(:artist_survey) }
     let(:artist_params) do
       {
-        artist: artist_attributes.merge(artist_survey_attributes: artist_survey_attributes)
+        artist: artist_attributes.merge(artist_survey_attributes: artist_survey_attributes),
       }
+    end
+
+    def go!
+      post :create, params: artist_params
     end
 
     it 'creates Artist' do

@@ -41,5 +41,5 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'localhost:3000' }
 
   config.logger = Logger.new(STDOUT)
-  config.log_level = :WARN
+  config.log_level = :DEBUG
 end
