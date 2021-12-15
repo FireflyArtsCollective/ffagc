@@ -1,4 +1,5 @@
 require 'csv'
+require 'vote_result'
 
 #
 # Allows for Artist identities to be revealed and more fully featured
