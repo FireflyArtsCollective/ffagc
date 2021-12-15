@@ -203,6 +203,4 @@ ActiveRecord::Schema.define(version: 2021_12_13_155334) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "submission_tags", "grant_submissions"
-  add_foreign_key "submission_tags", "tags"
 end

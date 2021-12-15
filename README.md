@@ -28,7 +28,17 @@ also be changed.
 
 * Update the template constants (install dates and deadlines) in config/template_values.yml.
 
+* Make a backup of the previous production table in the db/ folder
+
 * Reset the database with `bundle exec rake db:reset`. THIS WILL DELETE ALL DATA, so you may want to make a backup of the existing db first.
+
+* Copy the grants table into the new production folder:
+
+  * `attach database 'production-20XX.sqlite3' as local;`
+
+  * `insert into grants select * from local.grants;`
+
+  * You can adjust the dates as needed: `update grants set submit_start=DATETIME(submit_start, "+1 year");`
 
 ## Run Tests
 
