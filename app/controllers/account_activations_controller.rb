@@ -1,3 +1,5 @@
+require 'user_finder'
+
 class AccountActivationsController < ApplicationController
   # this GET request action can edit a user
   def show
