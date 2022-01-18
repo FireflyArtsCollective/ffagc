@@ -4,43 +4,43 @@
 # the db (famous last words).  Rule of thumb: If you need to know the value
 # behind the formatted text, don't put it here.
 
-install_day: "Friday, July 1, 2021"
-skill_attend_day: "Friday, June 28, 2021"
+install_day: "Saturday, July 2, 2022"
+skill_attend_day: "Friday, June 24, 2022"
 Temple:
-  contract_deadline: "Friday, February 21, 2021"
-  schedule: ["Friday, February 21, 2021: Signed Contracts Due",
-             "Tuesday, February 25, 2021: Check cut and sent",
-             "Tuesday, June 30 - Sunday, July 5, 2021: Firefly!"]
-Moonshot:
+  contract_deadline: "Monday, March 7, 2022"
+  schedule: ["Monday, March 7, 2022: Signed Contracts Due",
+             "Friday, March 11, 2022: Check cut and sent",
+             "Wednesday, June 29 - Monday, July 4, 2022: Firefly!"]
+Moonshot (disabled):
   contract_deadline: "10 days after notification of Grant"
-  schedule: ["Tuesday, June 30 - Sunday, July 5, 2021: Firefly!",
-             "Monday, July 27, 2021: Firefly documentation due"]
+  schedule: ["Wednesday, June 29 - Monday, July 4, 2022: Firefly!",
+             "Friday, July 22, 2022: Firefly documentation due"]
 Creativity:
-  contract_deadline: "Friday, April 3, 2021"
-  schedule: ["Friday, April 3, 2021: Signed Contracts Due",
-             "Monday, April 6, 2021: First check cut and sent",
-             "Tuesday, June 30 - Sunday, July 5, 2021: Firefly!",
-             "Monday, July 27, 2021: Firefly documentation due",
-             "Tuesday, August 3, 2021: Second check cut and sent"]
-Creativity (Second Round):
-  contract_deadline: "Friday, April 3, 2021"
-  schedule: ["Friday, April 3, 2021: Signed Contracts Due",
-             "Monday, April 6, 2021: First check cut and sent",
-             "Tuesday, June 30 - Sunday, July 5, 2021: Firefly!",
-             "Monday, August 3, 2021: Firefly documentation due",
-             "Tuesday, July 30, 2021: Second check cut and sent"]
+  contract_deadline: "Friday, May 6, 2022"
+  schedule: ["Friday, May 6, 2022: Signed Contracts Due",
+             "Monday, May 16, 2022: First check cut and sent",
+             "Wednesday, June 29 - Monday, July 4, 2022: Firefly!",
+             "Friday, July 22, 2022: Firefly documentation due",
+             "Friday, July 29, 2022: Second check cut and sent"]
+Creativity (Second Round) (disabled):
+  contract_deadline: "Friday, April 3, 2022"
+  schedule: ["Friday, April 3, 2022: Signed Contracts Due",
+             "Monday, April 6, 2022: First check cut and sent",
+             "Wednesday, June 29 - Monday, July 4, 2022: Firefly!",
+             "Monday, August 3, 2022: Firefly documentation due",
+             "Tuesday, July 30, 2022: Second check cut and sent"]
 Legacy:
-  contract_deadline: "Friday, April 17, 2021"
-  schedule: ["Friday, April 17, 2021: Signed Contracts Due",
-             "Monday, April 20, 2021: Check cut and sent",
-             "Tuesday, June 30 - Sunday, July 5, 2021: Firefly!"]
+  contract_deadline: "Friday, May 13, 2022"
+  schedule: ["Friday, May 14, 2022: Signed Contracts Due",
+             "Monday, May 16, 2022: Check cut and sent",
+             "Wednesday, June 29 - Monday, July 4, 2022: Firefly!"]
 Skillshare:
-  contract_deadline: "Friday, April 17, 2021"
-  schedule: ["Friday, April 17, 2021: Signed Contracts Due",
-             "Monday, April 20, 2021: Check cut and sent",
-             "Tuesday, June 30 - Sunday, July 5, 2021: Firefly!"]
+  contract_deadline: "Friday, April 17, 2022"
+  schedule: ["Friday, May 14, 2022: Signed Contracts Due",
+             "Monday, May 16, 2022: Check cut and sent",
+             "Wednesday, June 29 - Monday, July 4, 2022: Firefly!"]
 Burner Exchange Grants:
-  contract_deadline: "Friday, April 17, 2021"
-  schedule: ["Friday, April 17, 2021: Signed Contracts Due",
-             "Monday, April 203, 2021: Check cut and sent",
-             "Tuesday, June 30 - Sunday, July 5, 2021: Firefly!"]
+  contract_deadline: "Friday, April 17, 2022"
+  schedule: ["Friday, May 14, 2022: Signed Contracts Due",
+             "Monday, May 16, 2022: Check cut and sent",
+             "Wednesday, June 29 - Monday, July 4, 2022: Firefly!"]

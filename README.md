@@ -28,6 +28,8 @@ also be changed.
 
 * Update the template constants (install dates and deadlines) in config/template_values.yml.
 
+* Update golden files with `bundle exec rake grant_contracts:create_golden` and check the output in spec/fixtures/pdfs
+
 * Make a backup of the previous production table in the db/ folder
 
 * Reset the database with `bundle exec rake db:reset`. THIS WILL DELETE ALL DATA, so you may want to make a backup of the existing db first.
