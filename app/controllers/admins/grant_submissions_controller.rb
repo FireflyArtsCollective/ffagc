@@ -92,7 +92,7 @@ class Admins::GrantSubmissionsController < ApplicationController
           end
         end
 
-        render text: csv_string
+        render plain: csv_string
       end
     end
   end
