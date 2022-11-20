@@ -76,8 +76,8 @@ class Admins::GrantSubmissionsController < ApplicationController
         csv_string = CSV.generate do |csv|
           csv << ['Grant', 'Name', 'Tags', 'Artist Nickname', 'Funding Amount',
                   'Submission URL', 'Contact Name', 'Contact Email',
-                  'Payment Method', 'Paypal Email', 'Street', 'City',
-                  'State/Province', 'Country', 'Postal Code']
+                  'Payment Method', 'Popmoney Phone#', 'Paypal Email', 'Street',
+                  'City', 'State/Province', 'Country', 'Postal Code']
           @grant_submissions.each do |gs|
             grant = Grant.where(id: gs.grant_id).take
             tags = gs.tags(true).join(",")
@@ -85,14 +85,14 @@ class Admins::GrantSubmissionsController < ApplicationController
             artist = Artist.where(id: gs.artist_id).take
             url = "https://grants.fireflyartscollective.org/grant_submissions/#{gs.id}"
             csv << [grant.name, gs.name, tags, artist.name, funding, url,
-                    artist.contact_name, artist.email, "", "",
+                    artist.contact_name, artist.email, "", "", "",
                     artist.contact_street, artist.contact_city,
                     artist.contact_state, artist.contact_country,
                     artist.contact_zipcode]
           end
         end
 
-        render text: csv_string
+        render plain: csv_string
       end
     end
   end

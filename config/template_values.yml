@@ -22,25 +22,25 @@ Creativity:
              "Wednesday, June 29 - Monday, July 4, 2022: Firefly!",
              "Friday, July 22, 2022: Firefly documentation due",
              "Friday, July 29, 2022: Second check cut and sent"]
-Creativity (Second Round) (disabled):
-  contract_deadline: "Friday, April 3, 2022"
-  schedule: ["Friday, April 3, 2022: Signed Contracts Due",
+Creativity (Second Round):
+  contract_deadline: "Friday, June 3, 2022"
+  schedule: ["Friday, June 3, 2022: Signed Contracts Due",
              "Monday, April 6, 2022: First check cut and sent",
              "Wednesday, June 29 - Monday, July 4, 2022: Firefly!",
-             "Monday, August 3, 2022: Firefly documentation due",
+             "Friday, July 22, 2022: Firefly documentation due",
              "Tuesday, July 30, 2022: Second check cut and sent"]
 Legacy:
-  contract_deadline: "Friday, May 13, 2022"
-  schedule: ["Friday, May 14, 2022: Signed Contracts Due",
+  contract_deadline: "Friday, June 3, 2022"
+  schedule: ["Friday, June 3, 2022: Signed Contracts Due",
              "Monday, May 16, 2022: Check cut and sent",
              "Wednesday, June 29 - Monday, July 4, 2022: Firefly!"]
 Skillshare:
-  contract_deadline: "Friday, April 17, 2022"
+  contract_deadline: "Friday, June 3, 2022"
   schedule: ["Friday, May 14, 2022: Signed Contracts Due",
              "Monday, May 16, 2022: Check cut and sent",
              "Wednesday, June 29 - Monday, July 4, 2022: Firefly!"]
 Burner Exchange Grants:
-  contract_deadline: "Friday, April 17, 2022"
+  contract_deadline: "Friday, June 3, 2022"
   schedule: ["Friday, May 14, 2022: Signed Contracts Due",
              "Monday, May 16, 2022: Check cut and sent",
              "Wednesday, June 29 - Monday, July 4, 2022: Firefly!"]
