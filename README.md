@@ -22,7 +22,7 @@ There are a few changes to make every year:
 
 * Set the year of the event (e.g., "Apply for Firefly 2027!") in config/application.rb.
 
-* Check the grant contract templates in app/assets/contract_templates.  Each template filename
+* Check the grant contract templates in lib/contract_templates.  Each template filename
 must match the corresponding grant name, so if a grant changes name the template filename must
 also be changed.
 
