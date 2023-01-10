@@ -316,6 +316,7 @@ GEM
       sprockets (>= 3.0.0)
     sqlite3 (1.4.2)
     ssrf_filter (1.0.7)
+    stringio (0.1.0)
     therubyracer (0.12.3)
       libv8 (~> 3.16.14.15)
       ref
@@ -375,6 +376,7 @@ DEPENDENCIES
   sprockets (~> 3.7.2)
   sprockets-rails
   sqlite3
+  stringio (= 0.1.0)
   therubyracer
   timecop
   turbolinks

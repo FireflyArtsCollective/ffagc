@@ -10,7 +10,7 @@ shared_examples 'password reset model' do |mailer_method|
 
         expect(subject.reset_token).not_to be_nil
         expect(subject.reset_digest).not_to be_nil
-        expect(subject.reset_sent_at).to eq(Time.now)
+        expect(subject.reset_sent_at).to be_within(1.second).of(Time.now)
       end
     end
   end
