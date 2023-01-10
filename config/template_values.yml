@@ -20,7 +20,7 @@ Creativity:
   contract_deadline: "Sunday, March 26, 2023"
   schedule: ["Sunday, March 5, 2023: Submissions Due",
              "Sunday, March 26, 2023: Signed Contracts Due",
-             "Sunday, April 2: First check cut and sent",
+             "Sunday, April 2, 2023: First check cut and sent",
              "Tuesday, July 4 - Monday, July 10, 2023: Firefly!",
              "Friday, July 28, 2023: Firefly documentation due",
              "Friday, Aug 4, 2023: Second check cut and sent"]
@@ -49,3 +49,11 @@ Burner Exchange Grants:
              "Sunday, May 21, 2023: Signed Contracts Due",
              "Sunday, May 28, 2023: Check cut and sent",
              "Tuesday, July 4 - Monday, July 10, 2023: Firefly!"]
+TEST GRANT:
+  contract_deadline: "Sunday, March 26, 2023"
+  schedule: ["Sunday, March 5, 2023: Submissions Due",
+             "Sunday, March 26, 2023: Signed Contracts Due",
+             "Sunday, April 2, 2023: First check cut and sent",
+             "Tuesday, July 4 - Monday, July 10, 2023: Firefly!",
+             "Friday, July 28, 2023: Firefly documentation due",
+             "Friday, Aug 4, 2023: Second check cut and sent"]
