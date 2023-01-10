@@ -7,36 +7,36 @@
 install_day: "Friday, July 7, 2023"
 skill_attend_day: "Friday, June 30, 2023"
 Temple:
-  contract_deadline: "Monday, Feb 27, 2023"
-  schedule: ["Monday, Feb 13, 2023: Submissions Due"
-             "Monday, March 6, 2023: Signed Contracts Due",
-             "Friday, March 10, 2023: Check cut and sent",
+  contract_deadline: "Sunday, March 5, 2023"
+  schedule: ["Sunday, Feb 12, 2023: Submissions Due"
+             "Sunday, March 5, 2023: Signed Contracts Due",
+             "Sunday, March 12, 2023: Check cut and sent",
              "Tuesday, July 4 - Monday, July 10, 2023: Firefly!"]
 Moonshot (disabled):
   contract_deadline: "10 days after notification of Grant"
   schedule: ["Wednesday, June 29 - Monday, July 4, 2022: Firefly!",
              "Friday, July 22, 2022: Firefly documentation due"]
 Creativity:
-  contract_deadline: "Friday, March 27, 2023"
-  schedule: ["Monday, March 5, 2023: Submissions Due"
-             "Monday, March 27, 2023: Signed Contracts Due",
-             "Monday, April 3: First check cut and sent",
+  contract_deadline: "Sunday, March 26, 2023"
+  schedule: ["Sunday, March 5, 2023: Submissions Due"
+             "Sunday, March 26, 2023: Signed Contracts Due",
+             "Sunday, April 2: First check cut and sent",
              "Tuesday, July 4 - Monday, July 10, 2023: Firefly!",
              "Friday, July 28, 2023: Firefly documentation due",
              "Friday, Aug 4, 2023: Second check cut and sent"]
 Creativity (Second Round):
-  contract_deadline: "Monday, April 24, 2023"
-  schedule: ["Monday, April 3, 2023: Submissions Due"
-             "Monday, April 24, 2023: Signed Contracts Due",
-             "Monday, May 1, 2023: First check cut and sent",
+  contract_deadline: "Sunday, April 23, 2023"
+  schedule: ["Sunday, April 2, 2023: Submissions Due"
+             "Sunday, April 23, 2023: Signed Contracts Due",
+             "Sunday, April 30, 2023: First check cut and sent",
              "Tuesday, July 4 - Monday, July 10, 2023: Firefly!",
              "Friday, July 28, 2023: Firefly documentation due",
              "Friday, Aug 4, 2023: Second check cut and sent"]
 Legacy:
-  contract_deadline: "Monday, May 22, 2023"
-  schedule: ["Monday, May 1, 2023: Submissions Due"
-             "Monday, May 22, 2023: Signed Contracts Due",
-             "Monday, May 29, 2023: Check cut and sent",
+  contract_deadline: "Sunday, May 21, 2023"
+  schedule: ["Sunday, April 30, 2023: Submissions Due"
+             "Sunday, May 21, 2023: Signed Contracts Due",
+             "Sunday, May 28, 2023: Check cut and sent",
              "Tuesday, July 4 - Monday, July 10, 2023: Firefly!"]
 Skillshare (disabled):
   contract_deadline: "Friday, June 3, 2022"
@@ -44,8 +44,8 @@ Skillshare (disabled):
              "Monday, May 16, 2022: Check cut and sent",
              "Wednesday, June 29 - Monday, July 4, 2022: Firefly!"]
 Burner Exchange Grants:
-  contract_deadline: "Monday, May 22, 2023"
-  schedule: ["Monday, May 1, 2023: Submissions Due"
-             "Monday, May 22, 2023: Signed Contracts Due",
-             "Monday, May 29, 2023: Check cut and sent",
+  contract_deadline: "Sunday, May 21, 2023"
+  schedule: ["Sunday, April 30, 2023: Submissions Due"
+             "Sunday, May 21, 2023: Signed Contracts Due",
+             "Sunday, May 28, 2023: Check cut and sent",
              "Tuesday, July 4 - Monday, July 10, 2023: Firefly!"]
