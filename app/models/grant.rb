@@ -31,6 +31,15 @@ class Grant < ActiveRecord::Base
 
   private
 
+  # Returns all of the grants, minus the hidden ones if the param is true.
+  def self.all_maybe_hidden(can_view_hidden)
+    if !can_view_hidden
+      Grant.where(hidden: false)
+    else
+      Grant.all
+    end
+  end
+
   def dates_ordering
     validate_date_order(submit_start, submit_end, :submit_start, 'must be after submission end date')
     validate_date_order(vote_start, vote_end, :vote_start, 'must be after vote end date')

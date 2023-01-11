@@ -103,7 +103,7 @@
       </tr>
     <thead>
     <tbody>
-    <% @grants.each do |g| %>
+    <% Grant.all_maybe_hidden(current_admin).each do |g| %>
     <tr>
       <td><%= g.name %></td>
       <% if current_admin %><td><%= g.contract_template %></td><% end %>
