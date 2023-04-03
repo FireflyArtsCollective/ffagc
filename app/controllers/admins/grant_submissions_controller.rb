@@ -76,7 +76,7 @@ class Admins::GrantSubmissionsController < ApplicationController
         csv_string = CSV.generate do |csv|
           csv << ['Grant', 'Name', 'Tags', 'Artist Nickname', 'Funding Amount',
                   'Submission URL', 'Contact Name', 'Contact Email',
-                  'Payment Method', 'Popmoney Phone#', 'Paypal Email', 'Street',
+                  'Payment Method', 'Zelle Phone#', 'Paypal Email', 'Street',
                   'City', 'State/Province', 'Country', 'Postal Code']
           @grant_submissions.each do |gs|
             grant = Grant.where(id: gs.grant_id).take
