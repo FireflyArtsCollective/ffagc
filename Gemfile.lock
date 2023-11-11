@@ -331,6 +331,7 @@ GEM
       mini_portile2 (~> 2.8.0)
     ssrf_filter (1.1.1)
     stringio (3.0.2)
+    stringio (0.1.0)
     therubyracer (0.12.3)
       libv8 (~> 3.16.14.15)
       ref
@@ -393,6 +394,7 @@ DEPENDENCIES
   sprockets (~> 3.7.2)
   sprockets-rails
   sqlite3
+  stringio (= 0.1.0)
   therubyracer
   timecop
   turbolinks
