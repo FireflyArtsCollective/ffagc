@@ -14,6 +14,10 @@ module Ffagc
   Logger.level=Log4r::INFO
 
   class Application < Rails::Application
+    # 2023:
+    # https://guides.rubyonrails.org/upgrading_ruby_on_rails.html#new-activesupport-cache-serialization-format
+    config.load_defaults 7.0
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.

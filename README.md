@@ -20,6 +20,8 @@ If you're using SMTP to send emails, create a hidden file `.env` (it is already 
 
 There are a few changes to make every year:
 
+* Upgrade gems: bundle3.0 install && bundle3.0 update
+
 * Set the year of the event (e.g., "Apply for Firefly 2027!") in config/application.rb.
 
 * Check the grant contract templates in lib/contract_templates.  Each template filename
