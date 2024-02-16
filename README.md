@@ -24,9 +24,7 @@ There are a few changes to make every year:
 
 * Set the year of the event (e.g., "Apply for Firefly 2027!") in config/application.rb.
 
-* Check the grant contract templates in lib/contract_templates.  Each template filename
-must match the corresponding grant name, so if a grant changes name the template filename must
-also be changed.
+* Check the grant contract templates in lib/contract_templates. Each grant has a template name that must match a contract filename on disk.
 
 * Update the template constants (install dates and deadlines) in config/template_values.yml.
 
@@ -34,7 +32,7 @@ also be changed.
 
 * Make a backup of the previous production table in the db/ folder
 
-* Reset the database with `bundle exec rake db:reset`. THIS WILL DELETE ALL DATA, so you may want to make a backup of the existing db first.
+* Reset the database with `bundle exec rake db:reset RAILS_ENV=production`. THIS WILL DELETE ALL DATA, so you may want to make a backup of the existing db first.
 
 * Copy the grants table into the new production folder:
 
