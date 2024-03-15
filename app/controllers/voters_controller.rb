@@ -41,6 +41,11 @@ class VotersController < ApplicationController
   end
 
   def create
+    # MONKEYPATCH -- disable voter creation to prevent the spam coming in
+    flash[:warning] = "Voter creation disabled"
+    redirect_to action: 'index'
+    return
+
     @voter = Voter.new(voter_params)
     @voter.email = @voter.email.downcase
 
