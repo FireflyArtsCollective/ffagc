@@ -42,5 +42,8 @@ module Ffagc
     # The timezone for the event, used to calculate submission and voting
     # deadlines.
     config.event_timezone = "America/New_York"
+
+    # This check was interfering with some proxy configurations.
+    config.action_dispatch.ip_spoofing_check = false
   end
 end

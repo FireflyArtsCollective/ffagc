@@ -30,6 +30,10 @@ class VotesController < ApplicationController
   end
 
   def update
+    if !current_voter.verified
+      head :unauthorized
+      return
+    end
     @grant_submissions = GrantSubmission.where(grant_id: active_vote_grants)
 
     # Realistically, only one var will ever change at a time because the user
