@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Debian 11 compat
-gem 'stringio', '0.1.0'
+gem 'stringio'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails'
