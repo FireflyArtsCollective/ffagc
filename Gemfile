@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 7.1'
+gem 'rails'
 gem 'webrick', '~> 1.7'
 # Define Abilites of Models in one place
 gem 'cancancan'
