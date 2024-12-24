@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gem 'stringio'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails'
+gem 'rails', '~> 7.1'
 gem 'webrick', '~> 1.7'
 # Define Abilites of Models in one place
 gem 'cancancan'
