@@ -5,18 +5,18 @@
 # behind the formatted text, don't put it here.
 
 install_day: "Friday, July 4, 2025"
-skill_attend_day: "Friday, June 30, 2025"
+skill_attend_day: "Monday, June 30, 2025"
 Temple:
   contract_deadline: "Sunday, March 2, 2025"
   schedule: ["Sunday, Feb 9, 2025: Submissions Due",
              "Sunday, March 2, 2025: Signed Contracts Due",
-             "Sunday, March 14, 2025: Check cut and sent",
+             "Friday, March 14, 2025: Check cut and sent",
              "Tuesday, July 1 - Sunday, July 6, 2025: Firefly!"]
 Creativity:
   contract_deadline: "Sunday, March 16, 2025"
   schedule: ["Sunday, March 2, 2025: Submissions Due",
-             "Sunday, March 15, 2025: Signed Contracts Due",
-             "Sunday, March 29, 2025: First check cut and sent",
+             "Sunday, March 16, 2025: Signed Contracts Due",
+             "Sunday, March 30, 2025: First check cut and sent",
              "Tuesday, July 1 - Sunday, July 6, 2025: Firefly!",
              "Friday, July 18, 2025: Firefly documentation due",
              "Friday, Aug 1, 2025: Second check cut and sent"]
