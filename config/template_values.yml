@@ -4,7 +4,7 @@
 # the db (famous last words).  Rule of thumb: If you need to know the value
 # behind the formatted text, don't put it here.
 
-install_day: "Thursday, July 4, 2025"
+install_day: "Friday, July 4, 2025"
 skill_attend_day: "Friday, June 30, 2025"
 Temple:
   contract_deadline: "Sunday, March 2, 2025"
