@@ -1,8 +1,5 @@
 source 'https://rubygems.org'
 
-# Debian 11 compat
-gem 'stringio'
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 7.1'
 gem 'webrick', '~> 1.7'
