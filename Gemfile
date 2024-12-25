@@ -8,7 +8,7 @@ gem 'cancancan'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 gem "sprockets-rails"
-gem 'sprockets', '~> 3.7.2'
+gem 'sprockets'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 gem 'therubyracer'

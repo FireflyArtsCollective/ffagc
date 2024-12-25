@@ -361,10 +361,9 @@ GEM
     simple_form (5.3.1)
       actionpack (>= 5.2)
       activemodel (>= 5.2)
-    sprockets (3.7.5)
-      base64
+    sprockets (4.2.1)
       concurrent-ruby (~> 1.0)
-      rack (> 1, < 3)
+      rack (>= 2.2.4, < 4)
     sprockets-rails (3.5.2)
       actionpack (>= 6.1)
       activesupport (>= 6.1)
@@ -438,7 +437,7 @@ DEPENDENCIES
   sassc-rails
   sdoc
   simple_form
-  sprockets (~> 3.7.2)
+  sprockets
   sprockets-rails
   sqlite3
   therubyracer
