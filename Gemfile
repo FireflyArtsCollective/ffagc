@@ -24,7 +24,7 @@ gem 'jquery-rails'
 
 # Forms
 gem 'simple_form'
-gem 'judge', '~> 2.0.5' # front-end form validation
+gem 'judge'
 gem 'country_select'
 
 # File upload
