@@ -56,6 +56,8 @@ gem 'dotenv-rails'
 # Automatically create text emails from HTML ones
 gem 'premailer-rails'
 
+gem 'csv'
+
 group :test, :development do
   gem 'pry'
 
