@@ -1,8 +1,5 @@
 source 'https://rubygems.org'
 
-# Debian 11 compat
-gem 'stringio', '0.1.0'
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails'
 gem 'webrick', '~> 1.7'
@@ -11,7 +8,7 @@ gem 'cancancan'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 gem "sprockets-rails"
-gem 'sprockets', '~> 3.7.2'
+gem 'sprockets'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 gem 'therubyracer'
@@ -27,7 +24,7 @@ gem 'jquery-rails'
 
 # Forms
 gem 'simple_form'
-gem 'judge', '~> 2.0.5' # front-end form validation
+gem 'judge'
 gem 'country_select'
 
 # File upload
@@ -58,6 +55,8 @@ gem 'dotenv-rails'
 
 # Automatically create text emails from HTML ones
 gem 'premailer-rails'
+
+gem 'csv'
 
 group :test, :development do
   gem 'pry'

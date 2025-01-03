@@ -22,7 +22,7 @@ Rails.application.routes.draw do
 
   resources :admins, only: [:new, :create, :index]
   namespace :admins do
-    resources :grant_submissions, only: [:index, :discuss] do
+    resources :grant_submissions, only: [:index] do
       get 'discuss'
       collection do
         post 'send_fund_emails'

@@ -45,5 +45,9 @@ module Ffagc
 
     # This check was interfering with some proxy configurations.
     config.action_dispatch.ip_spoofing_check = false
+
+    # Opt in to future Rails 8.1 to_time behaviour preserving full timezone
+    # rather than offset only
+    config.active_support.to_time_preserves_timezone = :zone
   end
 end

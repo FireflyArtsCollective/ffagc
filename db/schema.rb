@@ -10,14 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_13_155334) do
-
+ActiveRecord::Schema[8.0].define(version: 2021_12_13_155334) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
     t.integer "record_id", null: false
     t.integer "blob_id", null: false
-    t.datetime "created_at", null: false
+    t.datetime "created_at", precision: nil, null: false
     t.index ["blob_id"], name: "index_active_storage_attachments_on_blob_id"
     t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
   end
@@ -30,7 +29,7 @@ ActiveRecord::Schema.define(version: 2021_12_13_155334) do
     t.string "service_name", null: false
     t.bigint "byte_size", null: false
     t.string "checksum", null: false
-    t.datetime "created_at", null: false
+    t.datetime "created_at", precision: nil, null: false
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
@@ -43,14 +42,14 @@ ActiveRecord::Schema.define(version: 2021_12_13_155334) do
   create_table "admins", force: :cascade do |t|
     t.string "name"
     t.string "email"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", precision: nil
+    t.datetime "updated_at", precision: nil
     t.string "password_digest"
     t.string "activation_digest"
     t.boolean "activated", default: false
-    t.datetime "activated_at"
+    t.datetime "activated_at", precision: nil
     t.string "reset_digest"
-    t.datetime "reset_sent_at"
+    t.datetime "reset_sent_at", precision: nil
   end
 
   create_table "artist_surveys", force: :cascade do |t|
@@ -61,8 +60,8 @@ ActiveRecord::Schema.define(version: 2021_12_13_155334) do
     t.boolean "has_attended_bm"
     t.string "has_attended_bm_desc"
     t.boolean "can_use_as_example"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", precision: nil
+    t.datetime "updated_at", precision: nil
     t.integer "artist_id"
     t.index ["artist_id"], name: "index_artist_surveys_on_artist_id"
   end
@@ -70,8 +69,8 @@ ActiveRecord::Schema.define(version: 2021_12_13_155334) do
   create_table "artists", force: :cascade do |t|
     t.string "name"
     t.string "email"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", precision: nil
+    t.datetime "updated_at", precision: nil
     t.string "password_digest"
     t.string "contact_name"
     t.string "contact_phone"
@@ -81,17 +80,17 @@ ActiveRecord::Schema.define(version: 2021_12_13_155334) do
     t.string "contact_country"
     t.string "activation_digest"
     t.boolean "activated", default: false
-    t.datetime "activated_at"
+    t.datetime "activated_at", precision: nil
     t.string "reset_digest"
-    t.datetime "reset_sent_at"
+    t.datetime "reset_sent_at", precision: nil
     t.string "contact_zipcode"
   end
 
   create_table "grant_submissions", force: :cascade do |t|
     t.string "name"
     t.string "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", precision: nil
+    t.datetime "updated_at", precision: nil
     t.integer "grant_id"
     t.integer "artist_id"
     t.string "proposal"
@@ -99,8 +98,8 @@ ActiveRecord::Schema.define(version: 2021_12_13_155334) do
     t.boolean "funding_decision"
     t.string "questions"
     t.string "answers"
-    t.datetime "questions_updated_at"
-    t.datetime "answers_updated_at"
+    t.datetime "questions_updated_at", precision: nil
+    t.datetime "answers_updated_at", precision: nil
     t.string "private_funding_notes"
     t.string "public_funding_notes"
     t.string "funding_requests_csv"
@@ -110,14 +109,14 @@ ActiveRecord::Schema.define(version: 2021_12_13_155334) do
 
   create_table "grants", force: :cascade do |t|
     t.string "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.datetime "submit_start"
-    t.datetime "submit_end"
-    t.datetime "vote_start"
-    t.datetime "vote_end"
-    t.datetime "meeting_one"
-    t.datetime "meeting_two"
+    t.datetime "created_at", precision: nil
+    t.datetime "updated_at", precision: nil
+    t.datetime "submit_start", precision: nil
+    t.datetime "submit_end", precision: nil
+    t.datetime "vote_start", precision: nil
+    t.datetime "vote_end", precision: nil
+    t.datetime "meeting_one", precision: nil
+    t.datetime "meeting_two", precision: nil
     t.boolean "hidden", default: false
     t.string "funding_levels_csv"
     t.string "contract_template"
@@ -126,8 +125,8 @@ ActiveRecord::Schema.define(version: 2021_12_13_155334) do
   create_table "grants_voters", force: :cascade do |t|
     t.integer "voter_id"
     t.integer "grant_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", precision: nil
+    t.datetime "updated_at", precision: nil
   end
 
   create_table "proposals", force: :cascade do |t|
@@ -139,8 +138,8 @@ ActiveRecord::Schema.define(version: 2021_12_13_155334) do
   create_table "submission_tags", force: :cascade do |t|
     t.integer "tag_id"
     t.integer "grant_submission_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.index ["grant_submission_id"], name: "index_submission_tags_on_grant_submission_id"
     t.index ["tag_id"], name: "index_submission_tags_on_tag_id"
   end
@@ -148,14 +147,14 @@ ActiveRecord::Schema.define(version: 2021_12_13_155334) do
   create_table "tags", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.boolean "hidden", default: false
   end
 
   create_table "voter_submission_assignments", force: :cascade do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", precision: nil
+    t.datetime "updated_at", precision: nil
     t.integer "voter_id"
     t.integer "grant_submission_id"
   end
@@ -170,8 +169,8 @@ ActiveRecord::Schema.define(version: 2021_12_13_155334) do
     t.boolean "has_received_grant"
     t.boolean "has_received_other_grant"
     t.integer "how_many_fireflies"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", precision: nil
+    t.datetime "updated_at", precision: nil
     t.integer "voter_id"
     t.boolean "signed_agreement", default: false
     t.index ["voter_id"], name: "index_voter_surveys_on_voter_id"
@@ -180,27 +179,29 @@ ActiveRecord::Schema.define(version: 2021_12_13_155334) do
   create_table "voters", force: :cascade do |t|
     t.string "name"
     t.string "email"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", precision: nil
+    t.datetime "updated_at", precision: nil
     t.string "password_digest"
     t.boolean "verified"
     t.string "activation_digest"
     t.boolean "activated", default: false
-    t.datetime "activated_at"
+    t.datetime "activated_at", precision: nil
     t.string "reset_digest"
-    t.datetime "reset_sent_at"
+    t.datetime "reset_sent_at", precision: nil
   end
 
   create_table "votes", force: :cascade do |t|
     t.integer "score_t"
     t.integer "score_c"
     t.integer "score_f"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", precision: nil
+    t.datetime "updated_at", precision: nil
     t.integer "voter_id"
     t.integer "grant_submission_id"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "submission_tags", "grant_submissions"
+  add_foreign_key "submission_tags", "tags"
 end
