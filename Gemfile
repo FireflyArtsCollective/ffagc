@@ -11,7 +11,6 @@ gem "sprockets-rails"
 gem 'sprockets'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-gem 'therubyracer'
 gem 'execjs'
 
 # Use SCSS for stylesheets
