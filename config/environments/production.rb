@@ -128,5 +128,6 @@ Rails.application.configure do
   # This is the hostname that will be used in links inside emails
   config.action_mailer.default_url_options = { :host => 'grants.fireflyartscollective.org' }
 
-  config.action_mailer.delivery_method = :sendmail
+  # don't use sendmail while on docker
+  # config.action_mailer.delivery_method = :sendmail
 end
