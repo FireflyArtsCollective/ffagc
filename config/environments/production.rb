@@ -134,6 +134,7 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     address:              ENV['SMTP_ADDRESS'],
     port:                 ENV['SMTP_PORT'],
-    domain:               (ENV['SMTP_DOMAIN']).to_i
+    domain:               (ENV['SMTP_DOMAIN']).to_i,
+    openssl_verify_mode:  OpenSSL::SSL::VERIFY_NONE
   }
 end
