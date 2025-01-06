@@ -38,6 +38,7 @@ RUN bundle config set --local path "vendor/bundle" && \
 # Precompile app assets as the final step.
 COPY . /app/
 RUN bin/rails assets:precompile
+RUN chown -R www-data:www-data /app
 
 #####################################################################
 # Stage 2: Copy gems and assets from build stage and finalize image.
@@ -57,12 +58,11 @@ RUN apt-get update && \
 
 RUN bundle config set --local path "vendor/bundle"
 
+# switch user
+USER www-data:www-data
+
 # Copy everything from the build stage, including gems and precompiled assets.
 COPY --from=build /app /app/
-
-# switch user
-RUN chown -R www-data:www-data /app
-USER www-data:www-data
 
 EXPOSE 3000
 CMD ["bundle", "exec", "rails", "s", "-p", "3000"]
