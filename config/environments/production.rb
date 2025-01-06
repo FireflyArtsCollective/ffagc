@@ -131,8 +131,8 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
 
   config.action_mailer.smtp_settings = {
-    address:              Rails.application.secrets.smtp['address'],
-    port:                 Rails.application.secrets.smtp['port'],
-    domain:               Rails.application.secrets.smtp['domain']
+    address:              ENV['SMTP_ADDRESS'],
+    port:                 ENV['SMTP_PORT'],
+    domain:               (ENV['SMTP_DOMAIN']).to_i
   }
 end
