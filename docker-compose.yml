@@ -1,0 +1,13 @@
+services:
+  app:
+    image: ghcr.io/fireflyartscollective/ffagc:docker
+    restart: unless-stopped
+    volumes:
+      - /var/www/ffagc/.env:/app/.env
+      - /var/www/ffagc/public/uploads:/app/public/uploads
+      - /var/www/ffagc/db:/app/db
+    ports:
+      - '3000:3000'
+    environment:
+      - RAILS_ENV=production
+
