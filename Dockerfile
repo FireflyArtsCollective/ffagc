@@ -54,10 +54,15 @@ RUN apt-get update && \
 
 # Make sure Bundler knows where we're placing our gems coming from
 # the build stage.
+
 RUN bundle config set --local path "vendor/bundle"
 
 # Copy everything from the build stage, including gems and precompiled assets.
 COPY --from=build /app /app/
+
+# switch user
+RUN chown -R www-data:www-data /app
+USER www-data:www-data
 
 EXPOSE 3000
 CMD ["bundle", "exec", "rails", "s", "-p", "3000"]
