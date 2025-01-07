@@ -122,11 +122,19 @@ Rails.application.configure do
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
 
   # Prod email settings
+  config.action_mailer.logger = ActiveSupport::Logger.new("log/mailer.log")
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.perform_deliveries = true
 
   # This is the hostname that will be used in links inside emails
   config.action_mailer.default_url_options = { :host => 'grants.fireflyartscollective.org' }
 
-  config.action_mailer.delivery_method = :sendmail
+  config.action_mailer.delivery_method = :smtp
+
+  config.action_mailer.smtp_settings = {
+    address:              ENV['SMTP_ADDRESS'],
+    port:                 ENV['SMTP_PORT'],
+    domain:               (ENV['SMTP_DOMAIN']).to_i,
+    openssl_verify_mode:  OpenSSL::SSL::VERIFY_NONE
+  }
 end
