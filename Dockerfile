@@ -13,7 +13,8 @@ RUN apt-get update && \
   curl \
   gnupg \
   build-essential \
-  libpq-dev
+  libpq-dev \
+  libyaml-dev
 
 # Set up Node.js and Yarn package repositories.
 RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash -
