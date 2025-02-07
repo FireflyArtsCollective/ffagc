@@ -32,6 +32,8 @@ There are a few changes to make every year:
 
 * Make a backup of the previous production table in the db/ folder
 
+* IMPORTANT: Rotate the `SECRET_KEY_BASE` in .env to a new value with `rake secret` 
+
 * Reset the database with `bundle exec rake db:reset RAILS_ENV=production`. THIS WILL DELETE ALL DATA, so you may want to make a backup of the existing db first.
 
 * Copy the grants table into the new production folder:
