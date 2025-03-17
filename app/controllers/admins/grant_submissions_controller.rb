@@ -152,7 +152,8 @@ class Admins::GrantSubmissionsController < ApplicationController
         artist = Artist.where(id: gs.artist_id).take
         grant = Grant.where(id: gs.grant_id).take
         begin
-          UserMailer.notify_questions(gs, artist, grant, event_year).deliver
+          due_date = grant.meeting_two.prev_day(2)
+          UserMailer.notify_questions(gs, artist, grant, event_year, due_date).deliver
           logger.info "email: questions notification sent to #{artist.email}"
         rescue
           flash[:warning] = "Error sending emails (#{sent} sent)"
