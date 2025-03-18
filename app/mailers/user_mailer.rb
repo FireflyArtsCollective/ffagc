@@ -58,15 +58,12 @@ class UserMailer < ActionMailer::Base
     mail to: @artist.email, cc: get_cc(), subject: "#{@year} Firefly #{@grant.name} Grant Decision: #{@submission.name}"
   end
 
-  def notify_questions(submission, artist, grant, year)
+  def notify_questions(submission, artist, grant, year, due_date_val)
     @submission = submission
     @artist = artist
     @grant = grant
     @year = year
-
-    # XXX: Hard coded four day deadline is good enough, right?
-    d = DateTime.current.next_day(4)
-    @due_date = "#{Date::DAYNAMES[d.wday]}, #{d.strftime("%B %-d, %Y")}"
+    @due_date = "#{Date::DAYNAMES[due_date_val.wday]}, #{due_date_val.strftime("%B %-d, %Y")}"
 
     mail to: @artist.email, cc: get_cc(), subject: "#{@year} Firefly #{@grant.name} Grants: Questions regarding #{@submission.name}"
   end
