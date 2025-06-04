@@ -17,21 +17,23 @@ class GrantContract < Prawn::Document
     begin
       filename = File.join(GrantContract.template_dir, "#{@template}.tmpl.erb")
       template = File.open(filename, "rb").read
-      template.each_line do |line|
-        write_templated_line line
-      end
-    rescue
-      raise "Could not generate pdf -- missing contract template?"
-    end
-  end
-
-  def write_templated_line(line)
-    font_families.update("TimesNewRomanTTF" => {
+      font_families.update("TimesNewRomanTTF" => {
         :normal => Rails.root.join("app/assets/fonts/Times_New_Roman.ttf"),
         :italic => Rails.root.join("app/assets/fonts/Times_New_Roman_Italic.ttf"),
         :bold => Rails.root.join("app/assets/fonts/Times_New_Roman_Bold.ttf"),
         :bold_italic => Rails.root.join("app/assets/fonts/Times_New_Roman_Bold_Italic.ttf")
       })
+      font "TimesNewRomanTTF" do
+        template.each_line do |line|
+          write_templated_line line
+        end
+      rescue
+        raise "Could not generate pdf -- missing contract template?"
+      end
+    end
+  end
+
+  def write_templated_line(line)
     # This is a super simple templating system based on ERB and keywords.
     # Leading spaces (including spaces after the comma following a token)
     # are converted to indentation.  More spaces, more indents.
@@ -85,32 +87,28 @@ class GrantContract < Prawn::Document
 
     # Render the line
     template = ERB.new line.force_encoding("utf-8")
-    font "TimesNewRomanTTF" do
-      indent(indent_amount) do
-         text template.result(binding), :align => align, :size => size, :style => style, :indent_paragraphs => indent_amount
-      end
+    indent(indent_amount) do
+        text template.result(binding), :align => align, :size => size, :style => style, :indent_paragraphs => indent_amount
     end
   end
 
   def write_signatures()
     move_down 100
-    font "TimesNewRomanTTF" do
-      float do
-        bounding_box([50, cursor], :width => 200, :height => cursor) do
-          stroke_horizontal_rule
-          move_down 5
-          text "Artist"
+    float do
+      bounding_box([50, cursor], :width => 200, :height => cursor) do
+        stroke_horizontal_rule
+        move_down 5
+        text "Artist"
 
-          move_down 40
-          stroke_horizontal_rule
-          move_down 5
-          text "Project Title"
+        move_down 40
+        stroke_horizontal_rule
+        move_down 5
+        text "Project Title"
 
-          move_down 40
-          stroke_horizontal_rule
-          move_down 5
-          text "Firefly Arts Collective Representative"
-        end
+        move_down 40
+        stroke_horizontal_rule
+        move_down 5
+        text "Firefly Arts Collective Representative"
       end
 
       bounding_box([300, cursor], :width => 200, :height => cursor) do
