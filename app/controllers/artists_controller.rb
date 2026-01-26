@@ -9,6 +9,14 @@ class ArtistsController < ApplicationController
   end
 
   def create
+    # Verify captcha first
+    unless verify_recaptcha
+      flash.now[:warning] = "Please complete the captcha verification"
+      @artist = Artist.new(artist_params)
+      render 'new'
+      return
+    end
+
     if Artist.exists?(email: artist_params[:email].downcase)
       flash[:warning] = "The email address #{artist_params[:email.downcase]} already exists in our system"
       return

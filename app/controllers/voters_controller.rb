@@ -46,6 +46,14 @@ class VotersController < ApplicationController
     #redirect_to action: 'index'
     #return
 
+    # Verify captcha first
+    unless verify_recaptcha
+      flash.now[:warning] = "Please complete the captcha verification"
+      @voter = Voter.new(voter_params)
+      render 'new'
+      return
+    end
+
     @voter = Voter.new(voter_params)
     @voter.email = @voter.email.downcase
 

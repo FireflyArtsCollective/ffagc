@@ -55,6 +55,9 @@ gem 'dotenv-rails'
 # Automatically create text emails from HTML ones
 gem 'premailer-rails'
 
+# CAPTCHA for registration forms
+gem 'recaptcha'
+
 gem 'csv'
 
 group :test, :development do

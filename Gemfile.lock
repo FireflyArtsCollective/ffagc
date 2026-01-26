@@ -317,6 +317,7 @@ GEM
       erb
       psych (>= 4.0.0)
       tsort
+    recaptcha (5.21.1)
     regexp_parser (2.11.3)
     reline (0.6.3)
       io-console (~> 0.5)
@@ -449,6 +450,7 @@ DEPENDENCIES
   pry
   rails
   rails-controller-testing
+  recaptcha
   rspec-its
   rspec-rails
   rspec_junit_formatter
