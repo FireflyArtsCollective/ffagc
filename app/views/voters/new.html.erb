@@ -80,6 +80,10 @@
   <p>
   <%= submit_tag("Sign Up!", class: "btn btn-primary") %>
   </p>
+
+  <div class="form-group">
+    <%= recaptcha_v3(action: 'voter/signup') %>
+  </div>
 <% end %>
 <%= javascript_include_tag 'voters/new', 'data-turbolinks-track': true %>
 

@@ -55,4 +55,8 @@
   <% end %>
 
   <%= submit_tag("Sign Up!", class: "btn btn-primary")%>
+
+  <div class="form-group">
+    <%= recaptcha_v3(action: 'artist/signup') %>
+  </div>
 <% end %>
