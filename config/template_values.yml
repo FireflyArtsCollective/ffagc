@@ -7,16 +7,16 @@
 install_day: "Friday, July 3, 2026"
 skill_attend_day: "Tuesday, June 30, 2026"
 Temple:
-  contract_deadline: "Sunday, March 8, 2026"
-  schedule: ["Sunday, Feb 22, 2026: Submissions Due",
-             "Sunday, March 8, 2026: Signed Contracts Due",
-             "Friday, March 20, 2026: Check cut and sent",
-             "Tuesday, June 30 - Sunday, July 5, 2026: Firefly!"]
-Creativity:
   contract_deadline: "Sunday, March 22, 2026"
   schedule: ["Sunday, March 8, 2026: Submissions Due",
              "Sunday, March 22, 2026: Signed Contracts Due",
              "Sunday, March 29, 2026: First check cut and sent",
+             "Tuesday, June 30 - Sunday, July 5, 2026: Firefly!"]
+Creativity:
+  contract_deadline: "Sunday, April 5, 2026"
+  schedule: ["Sunday, March 22, 2026: Submissions Due",
+             "Sunday, April 5, 2026: Signed Contracts Due",
+             "Sunday, April 12, 2026: First check cut and sent",
              "Tuesday, June 30 - Sunday, July 5, 2026: Firefly!",
              "Friday, July 24, 2026: Firefly documentation due",
              "Friday, July 31, 2026: Second check cut and sent"]
